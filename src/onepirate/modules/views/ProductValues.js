@@ -59,7 +59,7 @@ function ProductValues(props) {
               </Typography>
               <Typography variant="h5">
                 {
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                  'Contando com uma mão de obra extremamente qualificada, a Sigmatec conta com funcionários com mais de 40 anos de experiência em soluções industriais'
                 }
 
               </Typography>
@@ -73,11 +73,11 @@ function ProductValues(props) {
                 alt="graph"
               />
               <Typography variant="h6" className={classes.title}>
-                Melhores produtos
+                Melhores serviços
               </Typography>
               <Typography variant="h5">
                 {
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                  'Temos como missão colocar a necessidade de nossos clientes sempre em primeiro lugar'
                 }
               </Typography>
             </div>
@@ -94,7 +94,7 @@ function ProductValues(props) {
               </Typography>
               <Typography variant="h5">
                 {
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                  'Com soluções especializadas somos capazes de oferecer o melhor custo benefício'
                 }
               </Typography>
             </div>

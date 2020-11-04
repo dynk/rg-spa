@@ -40,7 +40,10 @@ function ProductHero(props) {
         alt="increase priority"
       />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        SERVICOS E AUTOMACAO
+        SIGMATEC
+      </Typography>
+      <Typography color="inherit" align="center" variant="h4" marked="center">
+        SERVIÇOS E AUTOMAÇÃO
       </Typography>
       <Typography
         color="inherit"
@@ -48,10 +51,9 @@ function ProductHero(props) {
         variant="h5"
         className={classes.h5}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-      </Typography>
-      <Typography variant="body2" color="inherit" className={classes.more}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        Atuando nas Áreas de Engenharia e Serviços a Sigmatec é uma empresa especializada em criar
+soluções inovadoras aliando experiência, tecnologia e excelência no atendimento das necessidades
+e objetivos de cada cliente.
       </Typography>
     </ProductHeroLayout>
   );

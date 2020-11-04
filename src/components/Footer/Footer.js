@@ -12,7 +12,7 @@ function Copyright() {
     <React.Fragment>
       {'© '}
       <Link color="inherit" href="https://material-ui.com/">
-        NOME DA EMPRESA
+      SIGMATEC 
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
@@ -45,25 +45,59 @@ export default function AppFooter() {
   const footers = [
     {
       title: 'Empresa',
-      description: ['Time', 'Historia', 'Endereço'],
+      items: [
+        {
+          label: 'Time',
+          link: '#',
+        },
+        {
+          label: 'Historia',
+          link: '#',
+        },
+        {
+          label: 'Endereço',
+          link: '#',
+        },
+      ],
     },
     {
       title: 'Produtos',
-      description: [
-        'Automação',
-        'Medição',
+      items: [
+        {
+          label: 'Automação',
+          link: '#',
+        },
+        {
+          label: 'Medição',
+          link: '#',
+        },
       ],
     },
     {
       title: 'Serviços',
-      description: [
-        'Projetos',
-        'Consultoria',
+      items: [
+        {
+          label: 'Projetos',
+          link: 'solution',
+        },
+        {
+          label: 'Consultoria',
+          link: '#',
+        },
       ],
     },
     {
       title: 'Fale conosco',
-      description: ['Telefone', 'Email'],
+      items: [
+        {
+          label: 'Telefone',
+          link: 'contact',
+        },
+        {
+          label: 'Email',
+          link: 'contact',
+        },
+      ],
     },
   ];
 
@@ -76,10 +110,10 @@ export default function AppFooter() {
                 {footer.title}
               </Typography>
               <ul>
-                {footer.description.map((item) => (
-                  <li key={item}>
-                    <Link href="#" variant="subtitle1" color="textSecondary">
-                      {item}
+                {footer.items.map(({ label, link }) => (
+                  <li key={label}>
+                    <Link href={link} variant="subtitle1" color="textSecondary">
+                      {label}
                     </Link>
                   </li>
                 ))}

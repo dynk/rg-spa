@@ -15,6 +15,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Link from '@material-ui/core/Link'
+import logo from '../../assets/logo.png'
 
 const drawerWidth = 240;
 
@@ -23,11 +24,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
+  logo: {
+    height: '40px',
+  },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    backgroundColor: '#fff',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -103,11 +108,15 @@ export default function PersistentDrawerRight() {
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title} >
             <Link color="inherit" href="/" >
-              NOME DA EMPRESA + LOGO
+            <img 
+              src={logo}
+              className={classes.logo}
+              alt="logo"
+            />
           </Link>
           </Typography>
           <IconButton
-            color="inherit"
+            color="black"
             aria-label="open drawer"
             edge="end"
             onClick={handleDrawerOpen}
@@ -140,9 +149,9 @@ export default function PersistentDrawerRight() {
         <Divider />
         <List>
           {[
-            { label: 'Empresa', link: '/empresa' },
-            { label: 'Produtos', link: '/produtos' },
-            { label: 'Serviços', link: '/servicos' },
+            { label: 'Quem somos', link: '/about' },
+            { label: 'Experiência no Mercado', link: '/experience' },
+            { label: 'Soluções Industriais', link: '/solution' },
           ].map((item, index) => (
             <ListItem button key={index}>
               {/* <ListItemText primary={item.label} href='/empresa' /> */}
@@ -157,8 +166,7 @@ export default function PersistentDrawerRight() {
         <Divider />
         <List>
           {[
-            { label: 'Noticias', link: '/noticias' },
-            { label: 'Fale Conosco', link: '/contato' },
+            { label: 'Fale Conosco', link: '/contact' },
           ].map((item, index) => (
 
 

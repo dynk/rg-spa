@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import Button from '../components/Button';
-import Typography from '../components/Typography';
-import productHowItWorks1 from '../../../assets/productHowItWorks1.svg'
-import contact from '../../../assets/contact.svg'
-import magnifying from '../../../assets/magnifying-glass.svg'
-import deal from '../../../assets/deal.svg'
+import Typography from '../../components/Typography';
+import gerdau from './gerdau.png'
+import arcelor_mitau from './arcelor_mitau.png'
+import sma from './sma.png'
 
 
 const styles = (theme) => ({
@@ -73,61 +71,39 @@ function ProductHowItWorks(props) {
           className={classes.title}
           component="h2"
         >
-          Como funciona
+          Principais Clientes
         </Typography>
         <div>
           <Grid container spacing={5}>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-                <div className={classes.number}>1.</div>
                 <img
-                  src={contact}
+                  src={gerdau}
                   alt="suitcase"
                   className={classes.image}
                 />
-                <Typography variant="h5" align="center">
-                  Você nos contacta com sua demanda
-                </Typography>
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-                <div className={classes.number}>2.</div>
                 <img
-                  src={magnifying}
+                  src={sma}
                   alt="graph"
                   className={classes.image}
                 />
-                <Typography variant="h5" align="center">
-                  Nós analisamos sua demanda e provemos a melhor solução
-                </Typography>
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-                <div className={classes.number}>3.</div>
                 <img
-                  src={deal}
+                  src={arcelor_mitau}
                   alt="clock"
                   className={classes.image}
                 />
-                <Typography variant="h5" align="center">
-                  Após fechar o acordo começamos os trabalhos
-                </Typography>
               </div>
             </Grid>
           </Grid>
         </div>
-        <Button
-          color="secondary"
-          size="large"
-          variant="contained"
-          className={classes.button}
-          component="a"
-          href="/solution"
-        >
-          Conheça nossas soluçoes
-        </Button>
       </Container>
     </section>
   );

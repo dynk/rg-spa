@@ -12,7 +12,7 @@ function Copyright() {
     <React.Fragment>
       {'© '}
       <Link color="inherit" href="https://material-ui.com/">
-        NOME DA EMPRESA
+        SIGMATEC
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
