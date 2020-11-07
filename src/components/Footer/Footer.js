@@ -1,9 +1,9 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
-import Container from '@material-ui/core/Container';
-import Typography from '../Typography';
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Link from '@material-ui/core/Link'
+import Container from '@material-ui/core/Container'
+import Typography from '../Typography'
 import Box from '@material-ui/core/Box'
 
 
@@ -12,15 +12,15 @@ function Copyright() {
     <React.Fragment>
       {'© '}
       <Link color="inherit" href="https://material-ui.com/">
-      SIGMATEC 
+      SIGMATEC
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
-  );
+  )
 }
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   '@global': {
     ul: {
       margin: 0,
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function AppFooter() {
-  const classes = useStyles();
+  const classes = useStyles()
   const footers = [
     {
       title: 'Empresa',
@@ -99,31 +99,31 @@ export default function AppFooter() {
         },
       ],
     },
-  ];
+  ]
 
   return (
-<Container maxWidth="md" component="footer" className={classes.footer}>
-        <Grid container spacing={4} justifyContent="space-evenly">
-          {footers.map((footer) => (
-            <Grid item xs={6} sm={3} key={footer.title}>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                {footer.title}
-              </Typography>
-              <ul>
-                {footer.items.map(({ label, link }) => (
-                  <li key={label}>
-                    <Link href={link} variant="subtitle1" color="textSecondary">
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Grid>
-          ))}
-        </Grid>
-        <Box mt={5}>
-          <Copyright />
-        </Box>
-      </Container>
-  );
+    <Container maxWidth="md" component="footer" className={classes.footer}>
+      <Grid container spacing={4} justifyContent="space-evenly">
+        {footers.map(footer => (
+          <Grid item xs={6} sm={3} key={footer.title}>
+            <Typography variant="h6" color="textPrimary" gutterBottom>
+              {footer.title}
+            </Typography>
+            <ul>
+              {footer.items.map(({ label, link }) => (
+                <li key={label}>
+                  <Link href={link} variant="subtitle1" color="textSecondary">
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </Grid>
+        ))}
+      </Grid>
+      <Box mt={5}>
+        <Copyright />
+      </Box>
+    </Container>
+  )
 }

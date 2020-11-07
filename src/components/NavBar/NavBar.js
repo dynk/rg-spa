@@ -1,26 +1,26 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import React from 'react'
+import clsx from 'clsx'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
+import Drawer from '@material-ui/core/Drawer'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import List from '@material-ui/core/List'
+import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
 import Link from '@material-ui/core/Link'
 import logo from '../../assets/logo.png'
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
   },
@@ -81,20 +81,20 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginRight: 0,
   },
-}));
+}))
 
 export default function PersistentDrawerRight() {
-  const classes = useStyles();
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const classes = useStyles()
+  const theme = useTheme()
+  const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleDrawerClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <div className={classes.root}>
@@ -108,12 +108,12 @@ export default function PersistentDrawerRight() {
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title} >
             <Link color="inherit" href="/" >
-            <img 
-              src={logo}
-              className={classes.logo}
-              alt="logo"
-            />
-          </Link>
+              <img
+                src={logo}
+                className={classes.logo}
+                alt="logo"
+              />
+            </Link>
           </Typography>
           <IconButton
             color="black"
@@ -183,5 +183,5 @@ export default function PersistentDrawerRight() {
         </List>
       </Drawer>
     </div>
-  );
+  )
 }
