@@ -6,7 +6,6 @@ import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import TextField from '../components/TextField';
-import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
 // import image from '../../assets/images/automation.png'
 import image from '../../../assets/images/automation.png'
@@ -62,16 +61,13 @@ const styles = (theme) => ({
 
 function ProductCTA(props) {
   const { classes } = props;
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setOpen(true);
+    // setOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   return (
     <Container className={classes.root} component="section">

@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
-import productHowItWorks1 from '../../../assets/productHowItWorks1.svg'
 import contact from '../../../assets/contact.svg'
 import magnifying from '../../../assets/magnifying-glass.svg'
 import deal from '../../../assets/deal.svg'
