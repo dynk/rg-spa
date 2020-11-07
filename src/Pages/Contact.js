@@ -81,7 +81,7 @@ function Contact(props) {
                   Horário
               </Typography>
                 <Typography variant="h5">
-                  <span>8 a.m. - 18 p.m. </span>
+                  <span>8h - 18h </span>
                 </Typography>
               </div>
             </Grid>
