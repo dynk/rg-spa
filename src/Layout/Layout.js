@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react';
 import './Layout.css';
-import Home from './onepirate/Home'
+import Home from '../scenes/Home/Home'
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom'
-import Experience from './Pages/Experience'
-import About from './Pages/About'
-import Solution from './Pages/Solution'
-import Contact from './Pages/Contact'
-import themeProvider from './provider/Theme/withRoot'
+import Experience from '../scenes/Experience'
+import About from '../scenes/About'
+import Solution from '../scenes/Solution'
+import Contact from '../scenes/Contact'
+import themeProvider from '../provider/Theme/withRoot'
 
 function App() {
   let routes = (
