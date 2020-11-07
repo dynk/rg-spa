@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import './App.css';
+import './Layout.css';
 import Home from './onepirate/Home'
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom'
 import Experience from './Pages/Experience'
