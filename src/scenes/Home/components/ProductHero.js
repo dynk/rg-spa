@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Typography from '../../../components/Typography';
-import ProductHeroLayout from './ProductHeroLayout';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Typography from '../../../components/Typography'
+import ProductHeroLayout from './ProductHeroLayout'
 import backgroundImage from '../../../assets/images/pequenas-automacoes.jpg'
 
-const styles = (theme) => ({
+const styles = theme => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
     backgroundColor: '#7fc7d9', // Average color of the background image.
@@ -24,10 +24,10 @@ const styles = (theme) => ({
   more: {
     marginTop: theme.spacing(2),
   },
-});
+})
 
 function ProductHero(props) {
-  const { classes } = props;
+  const { classes } = props
 
   return (
     <ProductHeroLayout backgroundClassName={classes.background}>
@@ -54,11 +54,11 @@ soluções inovadoras aliando experiência, tecnologia e excelência no atendime
 e objetivos de cada cliente.
       </Typography>
     </ProductHeroLayout>
-  );
+  )
 }
 
 ProductHero.propTypes = {
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withStyles(styles)(ProductHero);
+export default withStyles(styles)(ProductHero)

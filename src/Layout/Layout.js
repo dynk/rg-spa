@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react';
-import './Layout.css';
+import React, { Suspense } from 'react'
+import './Layout.css'
 import Home from '../scenes/Home/Home'
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom'
 import Experience from '../scenes/Experience'
@@ -16,7 +16,7 @@ function App() {
       <Route path="/solution" component={Solution} />
       <Route path="/contact" component={Contact} />
       <Route path="/experience" component={Experience} />
-      
+
       <Redirect to="/" />
     </Switch>
   )
@@ -24,7 +24,7 @@ function App() {
     <div>
       <Suspense fallback={<p>Carregando...</p>}>{routes}</Suspense>
     </div>
-  );
+  )
 }
 
 export default withRouter(themeProvider(App))

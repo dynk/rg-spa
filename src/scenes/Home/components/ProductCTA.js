@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Container from '@material-ui/core/Container';
-import Typography from '../../../components/Typography';
-import TextField from '../../../components/TextField';
-import Button from '../../../components/Button';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Hidden from '@material-ui/core/Hidden'
+import Container from '@material-ui/core/Container'
+import Typography from '../../../components/Typography'
+import TextField from '../../../components/TextField'
+import Button from '../../../components/Button'
 import image from '../../../assets/images/automation.png'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     marginTop: theme.spacing(10),
     marginBottom: 0,
@@ -56,16 +56,16 @@ const styles = (theme) => ({
     width: '100%',
     maxWidth: 600,
   },
-});
+})
 
 function ProductCTA(props) {
-  const { classes } = props;
+  const { classes } = props
   // const [open, setOpen] = React.useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = event => {
+    event.preventDefault()
     // setOpen(true);
-  };
+  }
 
 
   return (
@@ -108,11 +108,11 @@ function ProductCTA(props) {
         </Grid>
       </Grid>
     </Container>
-  );
+  )
 }
 
 ProductCTA.propTypes = {
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withStyles(styles)(ProductCTA);
+export default withStyles(styles)(ProductCTA)

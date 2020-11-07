@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { withStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import React from 'react'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
+import { withStyles } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     color: theme.palette.common.white,
     position: 'relative',
@@ -47,10 +47,10 @@ const styles = (theme) => ({
     position: 'absolute',
     bottom: theme.spacing(4),
   },
-});
+})
 
 function ProductHeroLayout(props) {
-  const { backgroundClassName, children, classes } = props;
+  const { backgroundClassName, children, classes } = props
 
   return (
     <section className={classes.root}>
@@ -60,13 +60,13 @@ function ProductHeroLayout(props) {
         <div className={clsx(classes.background, backgroundClassName)} />
       </Container>
     </section>
-  );
+  )
 }
 
 ProductHeroLayout.propTypes = {
   backgroundClassName: PropTypes.string.isRequired,
   children: PropTypes.node,
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withStyles(styles)(ProductHeroLayout);
+export default withStyles(styles)(ProductHeroLayout)

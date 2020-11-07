@@ -1,14 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-import Typography from '../../../components/Typography';
+/* eslint-disable max-len */
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Container from '@material-ui/core/Container'
+import Typography from '../../../components/Typography'
 import moneySvg from '../../../assets/price.svg'
 import productSvg from '../../../assets/robot.svg'
 import experienceSvg from '../../../assets/experience.svg'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
@@ -38,10 +39,10 @@ const styles = (theme) => ({
     position: 'absolute',
     top: -180,
   },
-});
+})
 
 function ProductValues(props) {
-  const { classes } = props;
+  const { classes } = props
 
   return (
     <section className={classes.root}>
@@ -102,11 +103,11 @@ function ProductValues(props) {
         </Grid>
       </Container>
     </section>
-  );
+  )
 }
 
 ProductValues.propTypes = {
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withStyles(styles)(ProductValues);
+export default withStyles(styles)(ProductValues)

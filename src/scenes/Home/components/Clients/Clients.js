@@ -1,16 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-// import Typography from '../../components/Typography';
-import Typography from '../../../../components/Typography';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Container from '@material-ui/core/Container'
+import Typography from '../../../../components/Typography'
 import gerdau from './gerdau.png'
 import arcelor_mitau from './arcelor_mitau.png'
 import sma from './sma.png'
 
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     display: 'flex',
     backgroundColor: theme.palette.secondary.light,
@@ -53,10 +52,10 @@ const styles = (theme) => ({
   button: {
     marginTop: theme.spacing(8),
   },
-});
+})
 
 function ProductHowItWorks(props) {
-  const { classes } = props;
+  const { classes } = props
 
   return (
     <section className={classes.root}>
@@ -107,11 +106,11 @@ function ProductHowItWorks(props) {
         </div>
       </Container>
     </section>
-  );
+  )
 }
 
 ProductHowItWorks.propTypes = {
   classes: PropTypes.object.isRequired,
-};
+}
 
-export default withStyles(styles)(ProductHowItWorks);
+export default withStyles(styles)(ProductHowItWorks)

@@ -1,15 +1,15 @@
-import * as React from 'react';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import * as React from 'react'
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import Container from '@material-ui/core/Container';
+import Container from '@material-ui/core/Container'
 import Header from '../components/NavBar/NavBar'
 import Footer from '../components/Footer/Footer'
 import experienceSvg from '../assets/location.svg'
 import time from '../assets/time.svg'
 import contact from '../assets/contact.svg'
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
@@ -40,7 +40,7 @@ const styles = (theme) => ({
     position: 'absolute',
     top: -180,
   },
-});
+})
 
 
 function Contact(props) {
@@ -61,7 +61,7 @@ function Contact(props) {
                 />
                 <Typography variant="h6" className={classes.title}>
                   Localização
-              </Typography>
+                </Typography>
                 <Typography variant="h5">
                   <span>Sigmatec Comércio e Serviços </span>
                   <span>Rua Coronel Lauro Pires 62 </span>
@@ -79,7 +79,7 @@ function Contact(props) {
                 />
                 <Typography variant="h6" className={classes.title}>
                   Horário
-              </Typography>
+                </Typography>
                 <Typography variant="h5">
                   <span>8h - 18h </span>
                 </Typography>
@@ -94,12 +94,12 @@ function Contact(props) {
                 />
                 <Typography variant="h6" className={classes.title}>
                   Contatos
-              </Typography>
+                </Typography>
                 <Typography variant="h5">
                   <span>comercial@sigmatec.com.br</span><br></br>
                   <span>engenharia@sigmatec.com.br</span><br></br>
                   <span>locação@sigmatec.com</span>
-                  
+
                 </Typography>
               </div>
             </Grid>
@@ -108,7 +108,7 @@ function Contact(props) {
       </section>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default withStyles(styles)(Contact);
+export default withStyles(styles)(Contact)

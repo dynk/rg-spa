@@ -1,0 +1,49 @@
+{
+    "extends": "react-app",
+    "rules": {
+        "max-len": [
+            "error",
+            {
+                "code": 100,
+                "ignorePattern": "^import[^{]?from.+?$|<FormattedMessage.+?>|formattedMessageId=\".+?\"|<FormattedHTMLMessage"
+            }
+        ],
+        "indent": [
+            "error",
+            2,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "quotes": ["error", "single"],
+        "jsx-quotes": ["error", "prefer-double"],
+        "semi": ["error", "never"],
+        "no-console": ["error"],
+        "no-var": "error",
+        "no-alert": "error",
+        "no-eval": "error",
+        "no-extra-bind": "warn",
+        "no-trailing-spaces": "error",
+        "eol-last": "error",
+        "no-throw-literal": "off",
+        "no-underscore-dangle": 0,
+        "object-curly-spacing": ["error", "always"],
+        "react/jsx-pascal-case": "off",
+        "no-unused-expressions": "off",
+        "class-methods-use-this": ["off"],
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false,
+                "classes": false
+            }
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed",
+            {
+                "requireForBlockBody": false
+            }
+        ]
+    }
+}

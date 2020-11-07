@@ -1,5 +1,5 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import { green, grey, red } from '@material-ui/core/colors';
+import { createMuiTheme } from '@material-ui/core/styles'
+import { green, grey, red } from '@material-ui/core/colors'
 
 const rawTheme = createMuiTheme({
   palette: {
@@ -29,21 +29,21 @@ const rawTheme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: "'Work Sans', sans-serif",
+    fontFamily: '\'Work Sans\', sans-serif',
     fontSize: 14,
     fontWeightLight: 300, // Work Sans
     fontWeightRegular: 400, // Work Sans
     fontWeightMedium: 700, // Roboto Condensed
-    fontFamilySecondary: "'Roboto Condensed', sans-serif",
+    fontFamilySecondary: '\'Roboto Condensed\', sans-serif',
   },
-});
+})
 
 const fontHeader = {
   color: rawTheme.palette.text.primary,
   fontWeight: rawTheme.typography.fontWeightMedium,
   fontFamily: rawTheme.typography.fontFamilySecondary,
   textTransform: 'uppercase',
-};
+}
 
 const theme = {
   ...rawTheme,
@@ -103,6 +103,6 @@ const theme = {
       fontSize: 14,
     },
   },
-};
+}
 
-export default theme;
+export default theme
