@@ -1,6 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Drawer from '@material-ui/core/Drawer'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -19,8 +20,23 @@ import logo from '../../assets/logo.png'
 
 const drawerWidth = 240
 
+const navivationItems = [
+  { label: 'Quem somos', link: '/about' },
+  { label: 'Experiência no Mercado', link: '/experience' },
+  { label: 'Soluções Industriais', link: '/solution' },
+  { label: 'Fale Conosco', link: '/contact' },
+]
+
 
 const useStyles = makeStyles(theme => ({
+  DesktopMenu: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    justifyContent: 'space-between',
+    direction: 'revert',
+    padding: '0px 20px 0px 20px',
+  },
   root: {
     display: 'flex',
   },
@@ -86,6 +102,7 @@ const useStyles = makeStyles(theme => ({
 export default function PersistentDrawerRight() {
   const classes = useStyles()
   const theme = useTheme()
+  const isDesktopWindow = useMediaQuery(theme.breakpoints.up('sm'))
   const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
@@ -115,73 +132,65 @@ export default function PersistentDrawerRight() {
               />
             </Link>
           </Typography>
-          <IconButton
-            color="black"
-            aria-label="open drawer"
-            edge="end"
-            onClick={handleDrawerOpen}
-            className={clsx(open && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
+          {isDesktopWindow ? <div className={classes.DesktopMenu}>
+            {navivationItems.map((item, index) => (
+              <Typography variant="h7" >
+                <Link key={index} color="black" href={item.link} >
+                  {item.label}
+                </Link>
+              </Typography>
+            ))}
+          </div> : null}
+
+          {isDesktopWindow ? null :
+            <IconButton
+              color="black"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerOpen}
+              className={clsx(open && classes.hide)}
+            >
+              <MenuIcon />
+            </IconButton>}
+
         </Toolbar>
+
       </AppBar>
-      <main
+      {/* <main
         className={clsx(classes.content, {
           [classes.contentShift]: open,
         })}
       >
-      </main>
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="right"
-        open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </div>
-        <Divider />
-        <List>
-          {[
-            { label: 'Quem somos', link: '/about' },
-            { label: 'Experiência no Mercado', link: '/experience' },
-            { label: 'Soluções Industriais', link: '/solution' },
-          ].map((item, index) => (
-            <ListItem button key={index}>
-              {/* <ListItemText primary={item.label} href='/empresa' /> */}
-              <ListItemText>
-                <Link color="inherit" href={item.link} >
-                  {item.label}
-                </Link>
-              </ListItemText>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {[
-            { label: 'Fale Conosco', link: '/contact' },
-          ].map((item, index) => (
-
-
-            <ListItem button key={index}>
-              {/* <ListItemText primary={item.label} href='/empresa' /> */}
-              <ListItemText>
-                <Link color="inherit" href={item.link} >
-                  {item.label}
-                </Link>
-              </ListItemText>
-            </ListItem>
-
-          ))}
-        </List>
-      </Drawer>
+      </main> */}
+      {isDesktopWindow ? null :
+        <Drawer
+          className={classes.drawer}
+          variant="persistent"
+          anchor="right"
+          open={open}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+        >
+          <div className={classes.drawerHeader}>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            </IconButton>
+          </div>
+          <Divider />
+          <List>
+            {navivationItems.map((item, index) => (
+              <ListItem button key={index}>
+                <ListItemText>
+                  <Link color="inherit" href={item.link} >
+                    {item.label}
+                  </Link>
+                </ListItemText>
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
+      }
     </div>
   )
 }
