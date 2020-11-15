@@ -48,15 +48,15 @@ export default function AppFooter() {
       items: [
         {
           label: 'Time',
-          link: '#',
+          link: '/about',
         },
         {
           label: 'Historia',
-          link: '#',
+          link: '/about',
         },
         {
           label: 'Endereço',
-          link: '#',
+          link: '/contact',
         },
       ],
     },
@@ -65,11 +65,11 @@ export default function AppFooter() {
       items: [
         {
           label: 'Automação',
-          link: '#',
+          link: '/solution',
         },
         {
           label: 'Medição',
-          link: '#',
+          link: '/solution',
         },
       ],
     },
@@ -78,11 +78,11 @@ export default function AppFooter() {
       items: [
         {
           label: 'Projetos',
-          link: 'solution',
+          link: '/solution',
         },
         {
           label: 'Consultoria',
-          link: '#',
+          link: '/solution',
         },
       ],
     },
@@ -91,11 +91,11 @@ export default function AppFooter() {
       items: [
         {
           label: 'Telefone',
-          link: 'contact',
+          link: '/contact',
         },
         {
           label: 'Email',
-          link: 'contact',
+          link: '/contact',
         },
       ],
     },

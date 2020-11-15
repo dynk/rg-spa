@@ -9,7 +9,7 @@ import Footer from '../components/Footer/Footer'
 const useStyles = makeStyles(theme => ({
 
   heroContent: {
-    padding: theme.spacing(8, 0, 6),
+    padding: theme.spacing(15, 0, 6),
   },
 
 }))
